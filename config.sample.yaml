@@ -1,0 +1,52 @@
+# Jira to Vectara Ingestion Configuration
+# This is a sample configuration file. Copy this to config.yaml and fill in your credentials.
+
+# Vectara API Configuration
+vectara:
+  # Your Vectara API key (Personal API Key or OAuth2.0 token)
+  api_key: "your-vectara-api-key-here"
+
+  # Corpus key (numeric ID or string key)
+  corpus_key: "your-corpus-key-here"
+
+  # Customer ID (optional - auto-extracted from JWT if not provided)
+  # customer_id: "1234567890"
+
+# Jira Configuration
+jira:
+  # Jira instance base URL
+  base_url: "https://your-domain.atlassian.net"
+
+  # Jira username (email for Jira Cloud)
+  username: "your-email@example.com"
+
+  # Jira API token (not your password!)
+  # Get it from: https://id.atlassian.com/manage-profile/security/api-tokens
+  api_token: "your-jira-api-token"
+
+  # JQL query to filter issues
+  # Examples:
+  #   "project = MYPROJECT"
+  #   "project = MYPROJECT AND created >= -30d"
+  #   "project = MYPROJECT AND issueType = Bug AND status != Done"
+  jql: "project = MYPROJECT AND created >= -30d"
+
+  # Jira API version (2 for Server/Data Center, 3 for Cloud)
+  api_version: 3
+
+  # Maximum results per page
+  max_results: 100
+
+# SSL/TLS Configuration
+ssl:
+  # SSL verification options:
+  #
+  # Option 1: Verify using system CA certificates (default, most secure)
+  verify: true
+
+  # Option 2: Use custom CA certificate (for corporate proxies)
+  # verify: "/path/to/corporate-ca-bundle.crt"
+  # Windows example: "C:\\certs\\corporate-ca.crt"
+
+  # Option 3: Disable SSL verification (NOT RECOMMENDED - testing only!)
+  # verify: false
