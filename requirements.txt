@@ -1,14 +1,5 @@
-# Minimal dependencies for Jira to Vectara ingestion
-# No ML, no document processing, just API calls
-
-# HTTP requests with retry logic
 requests>=2.31.0
 urllib3>=2.0.0
 
 # YAML configuration file support
 pyyaml>=6.0
-
-# For parsing JWT tokens to extract customer_id
-# (already included in Python 3.x standard library: base64, json)
-
-# That's it! Only 3 external dependencies.

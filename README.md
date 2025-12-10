@@ -37,20 +37,12 @@ ssl:
 
 ## Run
 
-Activate the virtual environment:
+After editing `config.yaml`, activate the virtual environment and run:
 
-**Windows:**
 ```bash
-venv\Scripts\activate
-```
+source venv/bin/activate              # macOS/Linux
+# or venv\Scripts\activate            # Windows
 
-**macOS/Linux:**
-```bash
-source venv/bin/activate
-```
-
-Then run:
-```bash
 python jira_ingest.py --config config.yaml
 ```
 
