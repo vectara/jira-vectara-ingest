@@ -4,29 +4,21 @@ Lightweight tool to crawl Jira issues and index them into Vectara.
 
 ## Installation
 
+**Windows:**
 ```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate (Windows)
-venv\Scripts\activate
-
-# Activate (macOS/Linux)
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+setup.bat
 ```
+
+**macOS/Linux:**
+```bash
+./setup.sh
+```
+
+This will create a virtual environment and install all dependencies.
 
 ## Configuration
 
-Copy the sample config:
-
-```bash
-cp config.sample.yaml config.yaml
-```
-
-Edit `config.yaml` with your credentials:
+The setup script created `config.yaml` for you. Edit it with your credentials:
 
 ```yaml
 vectara:
@@ -45,6 +37,19 @@ ssl:
 
 ## Run
 
+Activate the virtual environment:
+
+**Windows:**
+```bash
+venv\Scripts\activate
+```
+
+**macOS/Linux:**
+```bash
+source venv/bin/activate
+```
+
+Then run:
 ```bash
 python jira_ingest.py --config config.yaml
 ```
@@ -116,9 +121,3 @@ ssl:
 ## Done
 
 That's it! Your Jira issues will be indexed into Vectara.
-
----
-
-**Additional Resources:**
-- [Detailed Comparison](DETAILED_COMPARISON.md) - Full comparison vs vectara-ingest
-- [Configuration Examples](QUICKSTART_DETAILED.md) - More JQL and config examples
