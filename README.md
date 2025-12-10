@@ -30,6 +30,8 @@ jira:
   username: "your-email@example.com"
   api_token: "your-jira-api-token"
   jql: "project = MYPROJECT AND created >= -30d"
+  api_version: 3        # 2 for Server/Data Center, 3 for Cloud
+  max_results: 100      # Results per page
 
 ssl:
   verify: true
